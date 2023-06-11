@@ -1,4 +1,5 @@
 ﻿using DataStore.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -6,6 +7,7 @@ namespace DotNet._6.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class StudentsController : ControllerBase
     {
         private readonly StudentsRepo studentsRepo;
